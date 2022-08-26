@@ -58,6 +58,7 @@ export default defineConfig({
     // 如果设置为false，整个项目中的所有 CSS 将被提取到一个 CSS 文件中
     cssCodeSplit: true,
     brotliSize: false,
+    minify: "terser",
     // 清除log
     terserOptions: {
       compress: {

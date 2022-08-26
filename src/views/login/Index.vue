@@ -11,6 +11,7 @@ function increment() {
 
 // lifecycle hooks
 onMounted(() => {
+  // eslint-disable-next-line
   console.log(`The initial count is ${count.value}.`)
 })
 </script>
