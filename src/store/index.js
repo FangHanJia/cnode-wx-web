@@ -1,4 +1,4 @@
-import {createStore} from 'vuex'
+import { createStore } from 'vuex'
 export const store = createStore({
   state: {
     count: 1
@@ -7,4 +7,4 @@ export const store = createStore({
   mutations: {},
   actions: {},
   modules: {}
-});
+})

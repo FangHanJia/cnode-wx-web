@@ -2,14 +2,19 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import postCssPxToRem from 'postcss-pxtorem'
 import viteCompression from 'vite-plugin-compression'
+import eslintPlugin from 'vite-plugin-eslint'
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
   // 第三方插件
   plugins: [
     vue(),
+    eslintPlugin({
+      include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts']
+    }),
     // 打包压缩，主要是本地gzip，如果服务器配置压缩也可以
-    viteCompression()
+    viteCompression(),
   ],
   // 别名
   resolve: {
@@ -78,12 +83,6 @@ export default defineConfig({
           // echarts: ['echarts']
         }
       }
-    }
-  },
-  // 自定义
-  define: {
-    'process.env': {
-      'BASE_API': "/api"
     }
   }
 })

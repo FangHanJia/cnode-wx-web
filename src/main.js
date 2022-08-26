@@ -5,8 +5,8 @@ import vant from 'vant'
 // 全局引入样式
 import 'vant/lib/index.css'
 
-// 样式 
-import './style.css'
+// 样式
+import './assets/css/reset.css'
 
 // 适配
 import 'lib-flexible'
@@ -22,7 +22,7 @@ import axios from './utils/http/axios'
 // 组件
 import App from './App.vue'
 
-const app = createApp(App);
+const app = createApp(App)
 // 挂载
 app.config.globalProperties.$axios = axios // 使用globalProperties挂载
 app.use(router)

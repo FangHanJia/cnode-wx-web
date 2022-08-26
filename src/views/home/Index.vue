@@ -21,7 +21,8 @@ function increment() {
 
 // lifecycle hooks
 onMounted(() => {
-  const { proxy } = getCurrentInstance();
+  const { proxy } = getCurrentInstance()
+  // eslint-disable-next-line
   console.log(proxy.$axios)
 })
 </script>
